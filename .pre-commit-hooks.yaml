@@ -1,0 +1,6 @@
+-   id: check-readme
+    name: Check for readme file
+    description: Validate for readme file presense
+    entry: check-readme
+    language: python
+
