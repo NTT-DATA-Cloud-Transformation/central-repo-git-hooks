@@ -1,4 +1,5 @@
 repos:
--   repo: git@github.com:Flux7Labs/template-repo-git-hooks/pre-commit-hooks
+-   repo: git@github.com:Flux7Labs/template-repo-git-hooks
     hooks:
     -   id: check-readme
+    -   id: validate-author-email

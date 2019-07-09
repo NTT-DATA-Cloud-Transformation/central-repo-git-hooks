@@ -1,6 +1,11 @@
--   id: check-readme
-    name: Check for readme file
-    description: Validate for readme file presense
-    entry: check-readme
-    language: python
+- id: check-readme
+  name: Check for readme file
+  description: Validate for readme file presense
+  entry: check-readme
+  language: python
 
+- id: validate-author-email
+  name: Validate the author flux7 email address
+  description: Valid flux7 email address
+  entry: validate-author-email
+  language: script
