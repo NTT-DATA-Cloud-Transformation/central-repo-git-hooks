@@ -8,5 +8,5 @@
 - id: validate-author-email
   name: Validate the author flux7 email address
   description: Valid flux7 email address
-  entry: validate-author-email
+  entry: validate-author-email.sh
   language: script
