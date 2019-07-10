@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os, fnmatch
 def find(pattern, path):
     result = []
