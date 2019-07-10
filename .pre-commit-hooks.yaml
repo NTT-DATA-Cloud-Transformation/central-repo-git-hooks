@@ -1,8 +1,8 @@
 - id: check-readme
   name: Check for readme file
   description: Validate for readme file presense
-  entry: check-readme
-  language: python
+  entry: check-readme.py
+  verbose: true
 
 - id: validate-author-email
   name: Validate the author flux7 email address
