@@ -2,6 +2,7 @@
   name: Check for readme file
   description: Validate for readme file presense
   entry: check-readme.py
+  language: python3
   verbose: true
 
 - id: validate-author-email
