@@ -1,8 +1,13 @@
 #!/bin/bash
 
 AUTHOR_EMAIL=`git config user.email`
+DOMAIN=$1
 
-if [[ $AUTHOR_EMAIL == *"@flux7.com"* ]];
+if [[ $DOMAIN = "" ]]; then
+  DOMAIN="@flux7.com"
+fi
+
+if [[ $AUTHOR_EMAIL == *"${DOMAIN}"* ]];
 then
   echo "correct email configured"
   exit 0
