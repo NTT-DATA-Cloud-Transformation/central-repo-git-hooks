@@ -1,11 +1,40 @@
 - id: check-readme
   name: Check for readme file
   description: Validate for readme file presense
-  entry: check-readme.sh
+  entry: hooks/scripts/check-readme.sh
   language: script
 
 - id: validate-author-email
   name: Validate the author flux7 email address
   description: Valid flux7 email address
-  entry: validate-author-email.sh
+  entry: hooks/scripts/validate-author-email.sh
   language: script
+
+- id: validate-author-email
+  name: Validate the author flux7 email address
+  description: Valid flux7 email address
+  entry: hooks/scripts/validate-author-email.sh
+  language: script
+
+- id: terraform-fmt
+  name: Terraform fmt
+  description: Runs `terraform fmt` on all Terraform files
+  language: script
+  entry: hooks/scripts/terraform_fmt.sh
+  files: (\.tf|\.tfvars)$
+  exclude: \.terraform\/.*$
+
+- id: packer-validate
+  name: Packer validate
+  description: Runs `packer validate` on all staged packer files
+  language: script
+  entry: hooks/scripts/packer_validate.sh
+  files: \.json$
+
+- id: cfn-lint
+  name: Cloudformation Lint
+  description: Runs cfn-lint on CloudFormation Templates
+  language: script
+  entry: hooks/scripts/cfn_lint.sh
+  files: (\.yml|\.yaml)$
+
