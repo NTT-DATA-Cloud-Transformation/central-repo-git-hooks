@@ -10,21 +10,26 @@ Git hooks are scripts that Git executes automaticaly on occurance of events like
 ### How to use pre-commit
 
 ```
-$git init
+create a direcotry for your project repository and and initiliaze the git using git init command.
+$ git init
 Initialized empty Git repository in /home/kishor_flux7/mywork/testing/.git/
 
-$vi .pre-commit-config.yaml
+create  .pre-commit-config.yaml file .
+$ vi .pre-commit-config.yaml
 
-$cat .pre-commit-config.yaml
+Add the reference to use this repo and the rev as the brach or git tag , and under hooks list add the hooks you wish to call.
+$ cat .pre-commit-config.yaml
 - repo: https://github.com/Flux7Labs/central-repo-git-hooks
   rev: master
   hooks:
     - id: terraform-fmt
 
-$pre-commit install
+Run the pre-commit install command to initialize the pre-commit.
+$ pre-commit install
 pre-commit installed at .git/hooks/pre-commit
 
-$pre-commit run -a
+Run the following command to test if the pre-commit hook executes.
+$ pre-commit run -a
 Terraform fmt........................................(no files to check)Skipped
 
 ```
