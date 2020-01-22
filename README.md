@@ -41,7 +41,7 @@ Following are the available hooks -
   description: Validate for readme file presense
   
 - id: validate-author-email
-  description: Valid flux7 email address
+  description: Validate the author flux7 email address
   
 - id: terraform-fmt
   description: Runs `terraform fmt` on all Terraform files
@@ -52,4 +52,3 @@ Following are the available hooks -
 - id: cfn-lint
   description: Runs cfn-lint on CloudFormation Templates
 ```
-### Example
