@@ -1,11 +1,8 @@
 #!/bin/bash
 
-AUTHOR_EMAIL=`git config user.email`
-DOMAIN=$1
-
-if [[ $DOMAIN = "" ]]; then
-  DOMAIN="@flux7.com"
-fi
+AUTHORINFO=$(git var GIT_AUTHOR_IDENT) || exit 1
+AUTHOR_EMAIL=$(printf '%s\n\n' "${AUTHORINFO}" | sed -n 's/^.* <\(.*\)> .*$/\1/p')
+DOMAIN="@flux7.com"
 
 if [[ $AUTHOR_EMAIL == *"${DOMAIN}"* ]];
 then
