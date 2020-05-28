@@ -33,7 +33,7 @@
   files: (\.yml|\.yaml)$
 
 - id: prbuild-lint
-  name: Cloudformation Lint
+  name: prbuild Lint
   description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked
   language: script
   entry: hooks/scripts/prbuild-lint.sh
