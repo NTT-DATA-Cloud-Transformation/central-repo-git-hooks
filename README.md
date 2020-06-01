@@ -7,7 +7,7 @@ Git hooks are scripts that Git executes automaticaly on occurance of events like
 ## pre-commit tool
 
 ### Pre-Requisites
-* You need to have the pre-commit package manager [installed](https://pre-commit.com/#install). 
+* You need to have the pre-commit package manager [installed](https://pre-commit.com/#install).
 
 
 
