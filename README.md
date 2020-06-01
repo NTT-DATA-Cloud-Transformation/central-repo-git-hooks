@@ -7,9 +7,7 @@ Git hooks are scripts that Git executes automaticaly on occurance of events like
 ## pre-commit tool
 
 ### Pre-Requisites
-* You need to have the pre-commit package manager [installed](https://pre-commit.com/#install). 
-
-* Use (Makefile)[./Makefile] to setup your local with the required pre-requisites. If you feel any additional tools needs installed, update the Makefile through a pull request and discuss the changes with the flux7 platforms team.
+* You need to have the pre-commit package manager [installed](https://pre-commit.com/#install).
 
 
 
