@@ -40,3 +40,10 @@
   entry: hooks/scripts/prbuild-lint.sh
   # files: (\.yml|\.yaml)$
 
+- id: check-ast
+  name: Check python ast
+  description: Simply check whether the files parse as valid python.
+  language: python
+  entry: hooks/script/check_ast.py
+  types: [python]
+
