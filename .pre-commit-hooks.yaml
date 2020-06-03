@@ -40,10 +40,10 @@
   entry: hooks/scripts/prbuild-lint.sh
   # files: (\.yml|\.yaml)$
 
-- id: check-ast
-  name: Check python ast
-  description: Simply check whether the files parse as valid python.
+- id: flake8
+  name: flake8
+  description: '`flake8` is a command-line utility for enforcing style consistency across Python projects.'
+  entry: hooks/scripts/check-ast.py
   language: python
-  entry: hooks/script/check_ast.py
   types: [python]
 
