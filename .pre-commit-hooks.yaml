@@ -37,7 +37,7 @@
   name: prbuild Lint
   description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked
   language: script
-  entry: hooks/scripts/cfn-lint.sh
+  entry: hooks/scripts/cfn_lint.sh
   args: [ "prbuild" ]
   # files: (\.yml|\.yaml)$
 
