@@ -8,4 +8,4 @@ set -e
 # - only check files with '.yaml' suffix (convention: reserve '.yml' for ansible)
 # - Use CF_CHECK to determine if actually a CloudFormation Template
 
-./cfn_lint.sh prbuild
+bash cfn_lint.sh prbuild
