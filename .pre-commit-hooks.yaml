@@ -50,7 +50,7 @@
 - id: prbuild-flake8-lint
   name: prbuild-flake8-lint
   description: '`flake8` is a command-line utility for enforcing style consistency across Python projects.'
-  entry: bash -c 'flake8'
+  entry: flake8
   # args: [ "prbuild" ]  
   language: system
   files: \.py$ 
