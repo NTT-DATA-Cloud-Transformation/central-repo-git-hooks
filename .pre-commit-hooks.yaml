@@ -46,4 +46,5 @@
   language: script
   entry: hooks/scripts/cfn_lint.sh
   args: [ "prbuild" ]
+  additional_dependencies: ['flake8']
 
