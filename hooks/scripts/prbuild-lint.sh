@@ -7,5 +7,5 @@ set -e
 # This hook is only required by a PR build and not required to be used by developers
 # - only check files with '.yaml' suffix (convention: reserve '.yml' for ansible)
 # - Use CF_CHECK to determine if actually a CloudFormation Template
-
-bash scripts/cfn_lint.sh prbuild
+#SKIP=flake8 git commit -m "foo"
+bash cfn_lint.sh prbuild
