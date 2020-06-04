@@ -11,9 +11,7 @@ set -e
 current_commit=$(git rev-parse HEAD)
 
 if [ "$1" == "prbuild" ] ; then
-	templates=(
-		$(git ls-tree -r ${current_commit} --name-only)
-	)
+	templates=($(git ls-tree -r ${current_commit} --name-only))
 else
 	templates=(
 		$(git diff --diff-filter=d --name-only --cached -- '*.py')
