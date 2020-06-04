@@ -33,11 +33,12 @@
   files: (\.yml|\.yaml)$
 
 # The below hook is only required by a PR build and not required to be used by developers
-- id: prbuild-lint
+- id: prbuild-cf-lint
   name: prbuild Lint
   description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked
   language: script
-  entry: hooks/scripts/prbuild-lint.sh
+  entry: hooks/scripts/cfn-lint.sh
+  args: prbuild
   # files: (\.yml|\.yaml)$
 
 # - id: flake8
