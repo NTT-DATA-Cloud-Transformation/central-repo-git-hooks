@@ -3,17 +3,14 @@
 set -e
 
 
-# Get only staged files 
-# - Don't check deleted files
+# Get all the files
+# This hook is only required by a PR build and not required to be used by developers
 # - only check files with '.yaml' suffix (convention: reserve '.yml' for ansible)
 # - Use CF_CHECK to determine if actually a CloudFormation Template
-# - Catch return code for additional output
 
 CF_CHECK='AWSTemplateFormatVersion'
-
-templates=(
-  $(git diff --diff-filter=d --name-only --cached -- '*.yaml' | xargs grep -l $CF_CHECK)
-)
+current_commit=$(git rev-parse HEAD)
+templates=($(git ls-tree -r ${current_commit} --name-only | xargs grep -l $CF_CHECK))
 
 [[ -z ${templates[@]} ]] && exit 0
 

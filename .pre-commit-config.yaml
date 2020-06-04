@@ -7,5 +7,4 @@ repos:
     -   id: terraform-fmt
     -   id: packer-validate
     -   id: cfn-lint
-    -   id: flake8-lint
 
