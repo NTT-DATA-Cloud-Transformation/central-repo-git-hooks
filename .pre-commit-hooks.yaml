@@ -41,7 +41,7 @@
 
 # The below hooks are only required or used by a PR build and not required to be used by developers
 - id: prbuild-cfn-lint
-  name: prbuild Lint
+  name: prbuild-cfn-lint
   description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked
   language: script
   entry: hooks/scripts/cfn_lint.sh
@@ -53,5 +53,5 @@
   entry: hooks/scripts/python_lint.sh
   args: [ "prbuild" ]  
   language: script
-  files: (\.py)$ 
+  files: \.py$ 
 
