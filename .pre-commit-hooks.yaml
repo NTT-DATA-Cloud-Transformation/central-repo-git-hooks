@@ -35,9 +35,9 @@
 - id: flake8-lint
   name: flake8-lint
   description: '`flake8` is a command-line utility for enforcing style consistency across Python projects.'
-  entry: hooks/scripts/python_lint.sh
-  language: script
-  files: (\.py)$   
+  entry: flake8  
+  language: system
+  files: \.py$ 
 
 # The below hooks are only required or used by a PR build and not required to be used by developers
 - id: prbuild-cfn-lint
@@ -46,12 +46,4 @@
   language: script
   entry: hooks/scripts/cfn_lint.sh
   args: [ "prbuild" ]
-
-- id: prbuild-flake8-lint
-  name: prbuild-flake8-lint
-  description: '`flake8` is a command-line utility for enforcing style consistency across Python projects.'
-  entry: flake8
-  # args: [ "prbuild" ]  
-  language: system
-  files: \.py$ 
 
