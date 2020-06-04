@@ -55,4 +55,12 @@ Following are the available hooks -
   
 - id: cfn-lint
   description: Runs cfn-lint on CloudFormation Templates
+
+- id: flake8-lint
+  description: '`flake8` is a command-line utility for enforcing style consistency across Python projects.'
+
+# The below hooks are only required or used by a PR build and not required to be used by developers
+- id: prbuild-cfn-lint
+  description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked  
+
 ```
