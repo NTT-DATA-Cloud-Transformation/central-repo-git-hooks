@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/Flux7Labs/central-repo-git-hooks.git
-    rev: master
+    rev: 'feat/US3719'
     hooks:
     -   id: check-readme
     -   id: validate-author-email
