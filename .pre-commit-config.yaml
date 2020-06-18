@@ -6,6 +6,6 @@ repos:
     -   id: validate-author-email
     -   id: terraform-fmt
     -   id: packer-validate
-    -   id: cfn-lint
+    -   id: prbuild-cfn-lint
     -   id: flake8-lint
 
