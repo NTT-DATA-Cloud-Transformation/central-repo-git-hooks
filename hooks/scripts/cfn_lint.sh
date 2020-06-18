@@ -12,15 +12,19 @@ set -e
 CF_CHECK='AWSTemplateFormatVersion'
 current_commit=$(git rev-parse HEAD)
 
-if [ "$1" == "prbuild" ] ; then
-	templates=(
-		$(git ls-tree -r ${current_commit} --name-only | xargs grep -l $CF_CHECK)
-	)
-else
-	templates=(
-		$(git diff --diff-filter=d --name-only --cached -- '*.yaml' | xargs grep -l $CF_CHECK)
-	)
-fi
+templates=(
+	$(git ls-tree -r ${current_commit} --name-only | xargs grep -l $CF_CHECK)
+)
+
+# if [ "$1" == "prbuild" ] ; then
+# 	templates=(
+# 		$(git ls-tree -r ${current_commit} --name-only | xargs grep -l $CF_CHECK)
+# 	)
+# else
+# 	templates=(
+# 		$(git diff --diff-filter=d --name-only --cached -- '*.yaml' | xargs grep -l $CF_CHECK)
+# 	)
+# fi
 
 
 [[ -z ${templates[@]} ]] && exit 0
