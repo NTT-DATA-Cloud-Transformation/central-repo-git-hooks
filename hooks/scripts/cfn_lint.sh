@@ -21,5 +21,6 @@ if [[ ${templates[@]} ]]; then
 	  exit ${cfnlint_exit}
 	fi
 else
+	echo "✓ (no files to check)Skipped"
 	exit 0
 fi
