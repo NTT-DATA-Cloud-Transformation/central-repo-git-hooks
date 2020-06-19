@@ -69,7 +69,6 @@ Following are the available hooks -
 
 The pre-commit hooks from this central-repo-git-hooks repo can be triggered to run against any repository.
 
-```
 - Checkout the code/project repository.
 
 - Change directory to the code/project repository.
@@ -80,5 +79,3 @@ The pre-commit hooks from this central-repo-git-hooks repo can be triggered to r
   
   The above command will install the pre-commit and all the other required linters and runs the pre-commit hooks validation 
   on the code/project repository reading the pre-commit [hooks config file](https://github.com/Flux7Labs/central-repo-git-hooks/blob/feat/US3719/.pre-commit-config.yaml) from this repo.
-  
-```
