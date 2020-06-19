@@ -20,4 +20,6 @@ if [[ ${templates[@]} ]]; then
 	  echo "✘ cfn-lint failed!" 1>&2
 	  exit ${cfnlint_exit}
 	fi
+else
+	exit 0
 fi
