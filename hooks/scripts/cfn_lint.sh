@@ -15,14 +15,12 @@ templates=(
 	$(git ls-tree -r ${current_commit} --name-only | xargs grep -l $CF_CHECK)
 )
 
-
-[[ -z ${templates[@]} ]] && exit 0
-
-cfn-lint ${templates[@]} || cfnlint_exit=$?
-
-if [ -z ${cfnlint_exit} ] ; then
-  echo "✓ cfn-lint passed"
-else
-  echo "✘ cfn-lint failed!" 1>&2
-  exit ${cfnlint_exit}
+if [[ ${templates[@]} ]]; then
+	cfn-lint ${templates[@]} || cfnlint_exit=$?
+	if [ -z ${cfnlint_exit} ] ; then
+	  echo "✓ cfn-lint passed"
+	else
+	  echo "✘ cfn-lint failed!" 1>&2
+	  exit ${cfnlint_exit}
+	fi
 fi
