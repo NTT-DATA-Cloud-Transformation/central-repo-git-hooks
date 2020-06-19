@@ -64,3 +64,21 @@ Following are the available hooks -
   description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked  
 
 ```
+
+### Developer - How to trigger hooks validation
+
+The pre-commit hooks from this central-repo-git-hooks repo can be triggered to run against any repository.
+
+```
+- Checkout the code/project repository.
+
+- Change directory to the code/project repository.
+
+- Install and validate the pre-commit hooks with the following command.
+
+  bash <(curl -s https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/blob/feat/US3719/developer-hooks.sh)
+  
+  The above command will install the pre-commit and all the other required linters and runs the pre-commit hooks validation 
+  on the code/project repository reading the pre-commit [hooks config file](https://github.com/Flux7Labs/central-repo-git-hooks/blob/feat/US3719/.pre-commit-config.yaml) from this repo.
+  
+```
