@@ -12,7 +12,7 @@ set -e
 CF_CHECK='AWSTemplateFormatVersion'
 current_commit=$(git rev-parse HEAD)
 templates=(
-	$(git ls-tree -r ${current_commit} --name-only | xargs grep -l $CF_CHECK)
+	$(git ls-tree -r ${current_commit} --name-only | grep -l $CF_CHECK)
 )
 
 if [[ ${templates[@]} ]]; then
