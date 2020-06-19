@@ -35,7 +35,7 @@ setup:
 	else
 		$(shell wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip -O terraform_binary.zip)
 		$(shell unzip terraform_binary.zip)
-		$(shell sudo mv ./terraform /usr/local/bin/terraform)
+		$(shell sudo mv -f ./terraform /usr/local/bin/terraform)
 	endif
 
 	pip install cfn-lint pre-commit flake8
