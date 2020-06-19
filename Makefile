@@ -26,13 +26,20 @@ all: setup run clean
 .PHONY: all
 
 setup:
-	@echo Installing pre-commit, terraform and linters...
+	@echo Installing pre-commit, terraform and linters...	
+	
+	ifeq ($(OSFLAG), OSX)
+		$(shell wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_darwin_amd64.zip -O terraform_binary.zip)
+		$(shell unzip terraform_binary.zip)
+		$(shell sudo mv ./terraform /usr/local/bin/terraform)
+	else
+		$(shell wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip -O terraform_binary.zip)
+		$(shell unzip terraform_binary.zip)
+		$(shell sudo mv ./terraform /usr/local/bin/terraform)
+	endif
+
 	pip install cfn-lint pre-commit flake8
 	pre-commit install
-	wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_darwin_amd64.zip -O terraform_binary.zip
-	unzip terraform_binary.zip
-	sudo mv ./terraform /usr/local/bin/terraform
-
 
 run:
 	@echo Running pre-commit hook validation using $(HOOK_CONFIG_FILE)...
