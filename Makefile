@@ -26,17 +26,23 @@ all: setup run clean
 
 setup:
 	@echo Installing pre-commit, terraform and linters...	
+
+	if [[ -f /usr/local/bin/terraform ]]; then \
+		echo "terraform already installed"; \
+	else \
+		if [ $(OSFLAG) == OSX ]; then \
+			wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_darwin_amd64.zip -O terraform_binary.zip;\
+			unzip terraform_binary.zip;\
+			mv ./terraform /usr/local/bin/terraform;\
+		elif [ $(OSFLAG) == Linux ]; then \
+			wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip -O terraform_binary.zip;\
+			unzip terraform_binary.zip;\
+			mv -f ./terraform /usr/local/bin/terraform;\
+		else \
+			echo "Please install the terraform manually in your OS if you want a TF linter with pre-commit"; \
+		fi \
+	fi \
 	
-	if [ $(OSFLAG) == OSX ]; then \
-		wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_darwin_amd64.zip -O terraform_binary.zip;\
-		unzip terraform_binary.zip;\
-		sudo mv ./terraform /usr/local/bin/terraform;\
-	fi
-	if [ $(OSFLAG) == Linux ]; then \
-		wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip -O terraform_binary.zip;\
-		unzip terraform_binary.zip;\
-		sudo mv -f ./terraform /usr/local/bin/terraform;\
-	fi
 	
 	pip install cfn-lint pre-commit flake8
 	pre-commit install
