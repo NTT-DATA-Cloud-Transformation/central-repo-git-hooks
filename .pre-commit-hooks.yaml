@@ -21,7 +21,7 @@
 - id: terraform-security-test
   name: terraform-security-test
   description: 'runs the security test on the terraform infra files'
-  entry: 'checkov -f'
+  entry: 'checkov -d'
   language: system
   files: (\.tf|\.tfvars)$
   exclude: \.terraform\/.*$  
