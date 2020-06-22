@@ -21,10 +21,13 @@
 - id: terraform-security-test
   name: terraform-security-test
   description: 'runs the security test on the terraform infra files'
-  entry: 'checkov -d ./'
-  language: system
-  files: (\.tf|\.tfvars)$
-  exclude: \.terraform\/.*$  
+  entry: hooks/scripts/terraform_security_test.sh
+  language: script
+  pass_filenames: true
+  always_run: false
+  files: \.tf$
+  exclude: \.+.terraform\/.*$
+  require_serial: true
 
 - id: packer-validate
   name: Packer validate
