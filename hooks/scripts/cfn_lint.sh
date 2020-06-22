@@ -11,7 +11,7 @@ set -e
 
 CF_CHECK='AWSTemplateFormatVersion'
 current_commit=$(git rev-parse HEAD)
-templates=$(find `pwd` -type f -exec grep -l 'AWSTemplate' {} \;)
+templates=$(find `pwd` -type f -exec grep -l $CF_CHECK {} \;)
 if [[ ${templates[@]} ]]; then
 	cfn-lint ${templates[@]} || cfnlint_exit=$?
 	if [ -z ${cfnlint_exit} ] ; then
