@@ -20,6 +20,7 @@
   files: \.tf$
   exclude: \.+.terraform\/.*$
   require_serial: true
+  args: "."
 
 - id: terraform-fmt
   name: Terraform fmt
