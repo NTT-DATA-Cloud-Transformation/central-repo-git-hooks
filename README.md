@@ -64,3 +64,21 @@ Following are the available hooks -
   description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked  
 
 ```
+
+### Developer - How to trigger hooks validation
+
+The pre-commit hooks from this central-repo-git-hooks repo can be triggered to run against any repository.
+
+- Checkout the code/project repository.
+
+- Change directory to the code/project repository.
+
+- Install and validate the pre-commit hooks with the following command.
+
+  bash <(curl -s https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/blob/master/developer-hooks.sh)
+  
+  The above command will install the pre-commit and all the other required linters and runs the pre-commit hooks validation on the code/project repository reading the pre-commit [hooks config file](https://github.com/Flux7Labs/central-repo-git-hooks/blob/master/.pre-commit-config.yaml) from this repo.
+
+### How this repo can be used as a part of the Server based PR Builds?
+
+[Makefile](./Makefile) : The makefile is developed as a part of this repository for the flexibility to use the pre-commit hooks as a part of server based pr builds on multiple repositories. For eg At Flux7, this make file is used by a centralized CI System which runs the code linting as a check on all the repositories irrespective of the language used by the code repository and this "Code-Linter" CI check could be possibly used to **block merges to master**.

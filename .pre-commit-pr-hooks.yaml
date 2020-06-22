@@ -1,0 +1,9 @@
+repos:
+-   repo: https://github.com/Flux7Labs/central-repo-git-hooks.git
+    rev: master
+    hooks:
+    -   id: check-readme
+    -   id: terraform-fmt
+    -   id: packer-validate
+    -   id: cfn-lint
+    -   id: flake8-lint
