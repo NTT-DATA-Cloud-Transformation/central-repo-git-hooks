@@ -81,4 +81,4 @@ The pre-commit hooks from this central-repo-git-hooks repo can be triggered to r
 
 ### How this repo can be used as a part of the Server based PR Builds?
 
-[Makefile](./Makefile) : The makefile is developed as a part of this repository for the flexibility to use the pre-commit hooks as a part of server based pr builds on multiple repositories. For eg At Flux7, this make file is used by a centralized CI System which runs the code linting as a check on all the repositories irrespective of the language used by the code repository and this "Code-Linter" CI check needs to be passed to be able to merge into master.
+[Makefile](./Makefile) : The makefile is developed as a part of this repository for the flexibility to use the pre-commit hooks as a part of server based pr builds on multiple repositories. For eg At Flux7, this make file is used by a centralized CI System which runs the code linting as a check on all the repositories irrespective of the language used by the code repository and this "Code-Linter" CI check could be possibly used to **block merges to master**.
