@@ -7,6 +7,5 @@ set -e
 export PATH=$PATH:/usr/local/bin
 echo "$@"
 for dir in $(echo "$@" | xargs -n1 dirname | sort -u | uniq); do
-  echo $dir
   checkov -d $dir
 done
