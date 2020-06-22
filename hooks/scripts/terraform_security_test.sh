@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -e
 
 # OSX GUI apps do not pick up environment variables the same way as Terminal apps and there are no easy solutions,
