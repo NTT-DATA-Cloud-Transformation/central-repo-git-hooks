@@ -18,6 +18,14 @@
   files: (\.tf|\.tfvars)$
   exclude: \.terraform\/.*$
 
+- id: terraform-security-test
+  name: terraform-security-test
+  description: 'runs the security test on the terraform infra files'
+  entry: 'checkov -d .'
+  language: system
+  files: (\.tf|\.tfvars)$
+  exclude: \.terraform\/.*$  
+
 - id: packer-validate
   name: Packer validate
   description: Runs `packer validate` on all staged packer files
