@@ -8,6 +8,7 @@ export PATH=$PATH:/usr/local/bin
 echo "Starting checkov using"
 echo "$@"
 for dir in $(echo "$@" | xargs -n1 dirname | sort -u | uniq); do
+  echo "In a loop"
   echo $dir
   checkov -d $dir
 done
