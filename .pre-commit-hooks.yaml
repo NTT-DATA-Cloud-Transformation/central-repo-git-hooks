@@ -16,8 +16,8 @@
   entry: hooks/scripts/terraform_security_test.sh
   language: script
   pass_filenames: true
-  always_run: false
-  files: \*.tf$
+  always_run: true
+  files: \.tf$
   exclude: \.+.terraform\/.*$
   require_serial: true
 
