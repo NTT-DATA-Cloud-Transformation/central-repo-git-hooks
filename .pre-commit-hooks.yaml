@@ -17,7 +17,7 @@
   language: script
   pass_filenames: true
   always_run: false
-  files: \.tf$
+  files: \*.tf$
   exclude: \.+.terraform\/.*$
   require_serial: true
 
