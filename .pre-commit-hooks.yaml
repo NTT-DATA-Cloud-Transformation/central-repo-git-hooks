@@ -15,11 +15,8 @@
   description: 'runs the security test on the terraform infra files'
   entry: hooks/scripts/terraform_security_test.sh
   language: script
-  pass_filenames: true
-  always_run: true
   files: \.tf$
   exclude: \.+.terraform\/.*$
-  require_serial: true
 
 - id: terraform-fmt
   name: Terraform fmt
