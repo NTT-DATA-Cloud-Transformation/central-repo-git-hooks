@@ -5,7 +5,7 @@
 ## Variables
 HOOK_FILE="https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/blob/master/.pre-commit-config.yaml"
 ARGS="--all-files"
-PKGS=" pre-commit cfn-lint flake8"
+PKGS=" pre-commit cfn-lint flake8 checkov"
 
 ## Validate the HOOK_FILE ResponseCode.
 RESP_CODE=$(curl -o /dev/null -s -w "%{http_code}\n" ${HOOK_FILE})
