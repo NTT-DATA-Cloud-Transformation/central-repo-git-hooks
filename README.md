@@ -50,8 +50,8 @@ Following are the available hooks -
 - id: terraform-fmt
   description: Runs `terraform fmt` on all Terraform files
 
-- id: terraform-security-check
-  description: 'runs the security checks on the terraform infra files'  
+- id: security-check
+  description: 'Scans Terraform, AWS CloudFormation and Kubernetes configuration files.'  
   
 - id: packer-validate
   description: Runs `packer validate` on all staged packer files
