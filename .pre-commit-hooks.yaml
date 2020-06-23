@@ -10,10 +10,10 @@
   entry: hooks/scripts/validate-author-email.sh
   language: script
 
-- id: terraform-security-test
-  name: terraform-security-test
-  description: 'runs the security test on the terraform infra files'
-  entry: hooks/scripts/terraform_security_test.sh
+- id: terraform-security-check
+  name: terraform-security-check
+  description: 'runs the security checks on the terraform infra files'
+  entry: hooks/scripts/terraform_security_check.sh
   language: script
   files: \.tf$
   exclude: \.+.terraform\/.*$

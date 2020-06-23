@@ -7,4 +7,4 @@ repos:
     -   id: packer-validate
     -   id: cfn-lint
     -   id: flake8-lint
-    -   id: terraform-security-test
+    -   id: terraform-security-check
