@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/Flux7Labs/central-repo-git-hooks.git
-    rev: master
+    rev: feat/cftest
     hooks:
     -   id: check-readme
     -   id: terraform-fmt
