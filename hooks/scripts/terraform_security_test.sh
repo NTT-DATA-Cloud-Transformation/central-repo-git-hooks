@@ -5,7 +5,7 @@
 # workaround to allow GitHub Desktop to work, add this (hopefully harmless) setting here.
 export PATH=$PATH:/usr/local/bin
 echo "Starting checkov for \n\n $@ \n\n Files"
-for dir in $(echo "$@" | xargs -n1 dirname | sort -u | uniq); do
-  echo "Checking $dir"
-  checkov -d $dir
-done
+# for dir in $(echo "$@" | xargs -n1 dirname | sort -u | uniq); do
+#   echo "Checking $dir"
+checkov -d .
+# done
