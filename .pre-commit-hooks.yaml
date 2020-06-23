@@ -18,6 +18,14 @@
   files:  (\.tf|\.yaml|\.yml)$
   exclude: \.+.terraform\/.*$
 
+- id: terraform-fmt
+  name: Terraform fmt
+  description: Runs `terraform fmt` on all Terraform files
+  language: script
+  entry: hooks/scripts/terraform_fmt.sh
+  files: (\.tf|\.tfvars)$
+  exclude: \.terraform\/.*$
+
 - id: packer-validate
   name: Packer validate
   description: Runs `packer validate` on all staged packer files
@@ -38,4 +46,3 @@
   entry: 'flake8 --ignore=E501'
   language: system
   files: \.py$
-
