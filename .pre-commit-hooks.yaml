@@ -46,4 +46,3 @@
   entry: 'flake8 --ignore=E501'
   language: system
   files: \.py$
-
