@@ -46,3 +46,9 @@
   entry: 'flake8 --ignore=E501'
   language: system
   files: \.py$
+
+- id: check-prtemplate
+  name: Check for PR Template
+  description: Validate for PR Template file presense
+  entry: hooks/scripts/check-prtemplate.sh
+  language: script
