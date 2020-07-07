@@ -1,6 +1,6 @@
 - id: check-readme
   name: Check for readme file
-  description: Validate for readme file presense
+  description: Validate for readme file presence
   entry: hooks/scripts/check-readme.sh
   language: script
 
@@ -46,3 +46,9 @@
   entry: 'flake8 --ignore=E501'
   language: system
   files: \.py$
+
+- id: check-prtemplate
+  name: Check for PR Template
+  description: Validate for PR Template file presence
+  entry: hooks/scripts/check-prtemplate.sh
+  language: script
