@@ -1,6 +1,6 @@
 - id: check-readme
   name: Check for readme file
-  description: Validate for readme file presense
+  description: Validate for readme file presence
   entry: hooks/scripts/check-readme.sh
   language: script
 
@@ -49,6 +49,6 @@
 
 - id: check-prtemplate
   name: Check for PR Template
-  description: Validate for PR Template file presense
+  description: Validate for PR Template file presence
   entry: hooks/scripts/check-prtemplate.sh
   language: script

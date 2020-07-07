@@ -42,7 +42,7 @@ Terraform fmt........................................(no files to check)Skipped
 Following are the available hooks -
 ```
 - id: check-readme
-  description: Validate for readme file presense
+  description: Validate for readme file presence
   
 - id: validate-author-email
   description: Validate the author flux7 email address
