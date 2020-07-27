@@ -8,4 +8,5 @@ repos:
     -   id: packer-validate
     -   id: cfn-lint
     -   id: flake8-lint
-
+    -   id: security-check
+    -   id: check-prtemplate

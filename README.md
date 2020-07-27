@@ -42,13 +42,16 @@ Terraform fmt........................................(no files to check)Skipped
 Following are the available hooks -
 ```
 - id: check-readme
-  description: Validate for readme file presense
+  description: Validate for readme file presence
   
 - id: validate-author-email
   description: Validate the author flux7 email address
   
 - id: terraform-fmt
   description: Runs `terraform fmt` on all Terraform files
+
+- id: security-check
+  description: 'Scans Terraform, AWS CloudFormation and Kubernetes configuration files.'  
   
 - id: packer-validate
   description: Runs `packer validate` on all staged packer files
@@ -58,6 +61,9 @@ Following are the available hooks -
 
 - id: flake8-lint
   description: '`flake8` is a command-line utility for enforcing style consistency across Python projects.'
+
+- id: check-prtemplate
+  description: Validate for PR template file presence
 
 # The below hooks are only required or used by a PR build and not required to be used by developers
 - id: prbuild-cfn-lint

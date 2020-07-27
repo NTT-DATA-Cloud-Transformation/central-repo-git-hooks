@@ -1,10 +1,11 @@
 repos:
 -   repo: https://github.com/Flux7Labs/central-repo-git-hooks.git
-    rev: feat/US3323
+    rev: master
     hooks:
     -   id: check-readme
     -   id: terraform-fmt
     -   id: packer-validate
     -   id: cfn-lint
     -   id: flake8-lint
-    -   id: terraform-security-test
+    -   id: security-check
+    -   id: check-prtemplate
