@@ -14,7 +14,7 @@ current_commit=$(git rev-parse HEAD)
 templates=$(find `pwd` -type f -exec grep -l $CF_CHECK {} \;)
 if [[ ${templates[@]} ]]; then
 	cfn-lint ${templates[@]} || cfnlint_exit=$?
-	if [ -z ${cfnlint_exit} ] ; then
+	if [ -z ${cfnlint_exit} ] || [ cfnlint_exit != 4 ] ; then
 	  echo "✓ cfn-lint passed"
 	else
 	  echo "✘ cfn-lint failed!" 1>&2
