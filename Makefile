@@ -21,7 +21,7 @@ endif
 HOOK_CONFIG_FILE?=.pre-commit-pr-hooks.yaml
 export HOOK_CONFIG_FILE
 
-all: setup run clean
+all: setup run
 .PHONY: all
 
 setup:
@@ -49,9 +49,5 @@ setup:
 
 run:
 	@echo Running pre-commit hook validation using $(HOOK_CONFIG_FILE)...
-	pre-commit clean
 	pre-commit run -c $(HOOK_CONFIG_FILE) --all-files
 
-clean:
-	@echo Cleaning-up...
-	pre-commit clean
