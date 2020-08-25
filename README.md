@@ -43,19 +43,19 @@ Following are the available hooks -
 ```
 - id: check-readme
   description: Validate for readme file presence
-  
+
 - id: validate-author-email
   description: Validate the author flux7 email address
-  
+
 - id: terraform-fmt
   description: Runs `terraform fmt` on all Terraform files
 
 - id: security-check
-  description: 'Scans Terraform, AWS CloudFormation and Kubernetes configuration files.'  
-  
+  description: 'Scans Terraform, AWS CloudFormation and Kubernetes configuration files.'
+
 - id: packer-validate
   description: Runs `packer validate` on all staged packer files
-  
+
 - id: cfn-lint
   description: Runs cfn-lint on CloudFormation Templates
 
@@ -67,7 +67,7 @@ Following are the available hooks -
 
 # The below hooks are only required or used by a PR build and not required to be used by developers
 - id: prbuild-cfn-lint
-  description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked  
+  description: Runs cfn-lint on CloudFormation Templates when a pr build is invoked
 
 ```
 
@@ -81,8 +81,8 @@ The pre-commit hooks from this central-repo-git-hooks repo can be triggered to r
 
 - Install and validate the pre-commit hooks with the following command.
 
-  bash <(curl -s https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/blob/master/developer-hooks.sh)
-  
+  bash <(curl -s https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/master/developer-hooks.sh)
+
   The above command will install the pre-commit and all the other required linters and runs the pre-commit hooks validation on the code/project repository reading the pre-commit [hooks config file](https://github.com/Flux7Labs/central-repo-git-hooks/blob/master/.pre-commit-config.yaml) from this repo.
 
 ### How this repo can be used as a part of the Server based PR Builds?
