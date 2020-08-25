@@ -17,7 +17,7 @@ mkdir -p ${BASEDIR}
 curl ${HOOK_FILE_URL} > ${HOOK_FILE}
 
 
-if [[ -f ${HOOK_FILE} ]]; then
+if [[ -s ${HOOK_FILE} ]]; then
     pip3 install $PKGS
     pre-commit install
     pre-commit clean
