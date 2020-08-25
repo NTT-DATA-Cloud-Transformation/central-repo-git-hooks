@@ -3,7 +3,7 @@
 ## Pre-commit hook validation script for the developers.
 
 ## Variables
-HOOK_FILE="https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/blob/master/.pre-commit-config.yaml"
+HOOK_FILE="https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/master/.pre-commit-config.yaml"
 ARGS="--all-files"
 PKGS="pre-commit cfn-lint flake8 checkov"
 
