@@ -1,7 +1,7 @@
 #!/bin/bash
 
 AUTHOR_EMAIL=$(git config user.email)
-DOMAIN="@flux7.com"
+DOMAIN=$1
 
 if [[ $AUTHOR_EMAIL == *"${DOMAIN}"* ]];
 then
@@ -9,11 +9,11 @@ then
   exit 0
 else
   echo "######################################################"
-  echo "Author email configured is not a flux7 email"
+  echo "Author email configured is not a $DOMAIN email"
   echo " run:"
-  echo '     git config user.email "****@flux7.com"'
+  echo "     git config user.email ****$DOMAIN "
   echo "or"
-  echo '     git config --global user.email "*****@flux7.com"'
+  echo "     git config --global user.email *****$DOMAIN "
   echo "Then try commiting again"
   echo "######################################################"
   exit 1
