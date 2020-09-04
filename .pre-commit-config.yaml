@@ -4,6 +4,7 @@ repos:
     hooks:
     -   id: check-readme
     -   id: validate-author-email
+        args: ["@nttdata.com"]
     -   id: terraform-fmt
     -   id: packer-validate
     -   id: cfn-lint
