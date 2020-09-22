@@ -8,7 +8,7 @@ repos:
     -   id: terraform-fmt
     -   id: packer-validate
     -   id: cfn-lint
-        files: templates/.*\.(json|yml|yaml)$
+        files: ./.*\.(json|yml|yaml)$
     -   id: flake8-lint
     -   id: security-check
     -   id: check-prtemplate
