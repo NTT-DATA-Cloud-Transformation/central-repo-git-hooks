@@ -44,7 +44,7 @@ setup:
 	fi \
 	
 	
-	pip install cfn-lint pre-commit flake8 checkov
+	pip install cfn-lint pre-commit flake8 checkov==1.0.580
 	pre-commit install
 
 run:
