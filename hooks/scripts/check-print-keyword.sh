@@ -4,7 +4,7 @@
 
 count=`grep -r 'print\s*(' . | wc -l`
 
-if [[ ! $count -ge 1 ]]; then
+if [[ $count -ge 1 ]]; then
     echo "ERROR: print statement found in the repository. Please use custom_logger or python logging module and try again !!"
     exit 1
 else
