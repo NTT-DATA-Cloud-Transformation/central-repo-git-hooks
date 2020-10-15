@@ -52,3 +52,9 @@
   description: Validate for PR Template file presence
   entry: hooks/scripts/check-prtemplate.sh
   language: script
+
+- id: check-print-keyword
+  name: Check for Print keyword
+  description: Validate for print keyword in the code
+  entry: hooks/scripts/check-print-keyword.sh
+  language: script
