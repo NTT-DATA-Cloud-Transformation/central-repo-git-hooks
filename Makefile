@@ -50,7 +50,7 @@ setup:
 run:
 	@echo Running pre-commit hook validation using $(HOOK_CONFIG_FILE)...
 	pre-commit clean
-	pre-commit run -c $(HOOK_CONFIG_FILE) --all-files
+	pre-commit run -c $(HOOK_CONFIG_FILE)
 
 clean:
 	@echo Cleaning-up...
