@@ -52,10 +52,10 @@ run:
 	pre-commit clean
 
 	if [[ ! -z "$$EVENT_NAME" ]] && [[ "$$EVENT_NAME" == NIGHTLY ]]; then \
-		echo "Running in Nightly Mode"
+		echo "Running in Nightly Mode"; \
 		pre-commit run -c $(HOOK_CONFIG_FILE) --all-files;\
 	else \
-		pre-commit run -c $(HOOK_CONFIG_FILE) --from-ref master --to-ref HEAD;\
+		pre-commit run -c $(HOOK_CONFIG_FILE) --from-ref origin/master --to-ref HEAD;\
 	fi \
 
 
