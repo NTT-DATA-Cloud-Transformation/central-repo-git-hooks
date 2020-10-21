@@ -51,11 +51,10 @@ run:
 	@echo Running pre-commit hook validation using $(HOOK_CONFIG_FILE)...
 	pre-commit clean
 
-	if [[ ! -z "$$EVENT_NAME" ]] && [[ "$$EVENT_NAME" == NIGHTLY ]]; then \
-		echo "Running in Nightly Mode"; \
-		pre-commit run -c $(HOOK_CONFIG_FILE) --all-files;\
-	else \
+	if [[ ! -z "$$EVENT_NAME" ]] && [[ "$$EVENT_NAME" == PR ]]; then \
 		pre-commit run -c $(HOOK_CONFIG_FILE) --from-ref origin/master --to-ref HEAD;\
+	else \
+		pre-commit run -c $(HOOK_CONFIG_FILE) --all-files;\
 	fi \
 
 
