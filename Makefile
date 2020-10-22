@@ -44,13 +44,19 @@ setup:
 	fi \
 	
 	
-	pip install cfn-lint pre-commit flake8 checkov==1.0.580
+	pip install cfn-lint pre-commit flake8 flake8-print checkov==1.0.580
 	pre-commit install
 
 run:
 	@echo Running pre-commit hook validation using $(HOOK_CONFIG_FILE)...
 	pre-commit clean
-	pre-commit run -c $(HOOK_CONFIG_FILE) --all-files
+
+	if [[ ! -z "$$EVENT_NAME" ]] && [[ "$$EVENT_NAME" == PR ]]; then \
+		pre-commit run -c $(HOOK_CONFIG_FILE) --from-ref origin/master --to-ref HEAD;\
+	else \
+		pre-commit run -c $(HOOK_CONFIG_FILE) --all-files;\
+	fi \
+
 
 clean:
 	@echo Cleaning-up...
