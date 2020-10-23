@@ -42,9 +42,13 @@ setup:
 			echo "Please install the terraform manually in your OS if you want a TF linter with pre-commit"; \
 		fi \
 	fi \
+
+	if [[ ! -z "$$EVENT_NAME" ]] && [[ "$$EVENT_NAME" == PR ]]; then \
+		pip install cfn-lint pre-commit flake8 flake8-print checkov==1.0.580;\
+	else \
+		pip install cfn-lint pre-commit flake8 checkov==1.0.580;\
+	fi \
 	
-	
-	pip install cfn-lint pre-commit flake8 flake8-print checkov==1.0.580
 	pre-commit install
 
 run:
