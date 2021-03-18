@@ -44,8 +44,10 @@ setup:
 	fi \
 
 	if [[ ! -z "$$EVENT_NAME" ]] && [[ "$$EVENT_NAME" == PR ]]; then \
+	        pip install --upgrade pip;\
 		pip install cfn-lint pre-commit flake8 flake8-print checkov==1.0.580;\
 	else \
+	        pip install --upgrade pip;\
 		pip install cfn-lint pre-commit flake8 checkov==1.0.580;\
 	fi \
 	
