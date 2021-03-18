@@ -25,9 +25,6 @@ all: setup run clean
 .PHONY: all
 
 setup:
-	@echo Upgrading Pip...
-	pip install --upgrade pip;\
-	
 	@echo Installing pre-commit, terraform and linters...	
 
 	if [[ -f /usr/local/bin/terraform ]]; then \
