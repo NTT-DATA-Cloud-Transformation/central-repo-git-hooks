@@ -26,6 +26,8 @@ all: setup run clean
 
 setup:
 	@echo Installing pre-commit, terraform and linters...	
+	
+	pip install pip==20.2.4
 
 	if [[ -f /usr/local/bin/terraform ]]; then \
 		echo "terraform already installed"; \
