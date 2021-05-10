@@ -4,7 +4,7 @@
 
 
 ## Variables
-HOOK_FILE_URL="https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/master/.pre-commit-config.yaml"
+HOOK_FILE_URL="https://raw.githubusercontent.com/NTT-DATA-Cloud-Transformation/central-repo-git-hooks/master/.pre-commit-config.yaml"
 ARGS="--all-files"
 PKGS="pre-commit cfn-lint flake8 checkov"
 BASEDIR="/tmp/hooks"

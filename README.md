@@ -23,7 +23,7 @@ $ vi .pre-commit-config.yaml
 
 Add the reference to use this repo and the rev as the brach or git tag , and under hooks list add the hooks you wish to call.
 $ cat .pre-commit-config.yaml
-- repo: https://github.com/Flux7Labs/central-repo-git-hooks
+- repo: https://github.com/NTT-DATA-Cloud-Transformation/central-repo-git-hooks
   rev: master
   hooks:
     - id: terraform-fmt
@@ -81,9 +81,9 @@ The pre-commit hooks from this central-repo-git-hooks repo can be triggered to r
 
 - Install and validate the pre-commit hooks with the following command.
 
-  bash <(curl -s https://raw.githubusercontent.com/Flux7Labs/central-repo-git-hooks/master/developer-hooks.sh)
+  bash <(curl -s https://raw.githubusercontent.com/NTT-DATA-Cloud-Transformation/central-repo-git-hooks/master/developer-hooks.sh)
 
-  The above command will install the pre-commit and all the other required linters and runs the pre-commit hooks validation on the code/project repository reading the pre-commit [hooks config file](https://github.com/Flux7Labs/central-repo-git-hooks/blob/master/.pre-commit-config.yaml) from this repo.
+  The above command will install the pre-commit and all the other required linters and runs the pre-commit hooks validation on the code/project repository reading the pre-commit [hooks config file](https://github.com/NTT-DATA-Cloud-Transformation/central-repo-git-hooks/blob/master/.pre-commit-config.yaml) from this repo.
 
 ### How this repo can be used as a part of the Server based PR Builds?
 

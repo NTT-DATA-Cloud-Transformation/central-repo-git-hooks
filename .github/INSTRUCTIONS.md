@@ -1,5 +1,5 @@
 # WARNING !!!!
-The contents of this directory are included here by adding the repo https://github.com/Flux7Labs/central-repo-dot-github as
+The contents of this directory are included here by adding the repo https://github.com/NTT-DATA-Cloud-Transformation/central-repo-dot-github as
 a subtree. If you need to make any changes to the contents of this directory, you should understand subtrees and make
 an educated decision based on what you want to do and the impact to other users of this repo and how you will
 handle conflicts in an update
@@ -13,10 +13,10 @@ https://help.github.com/en/articles/creating-a-pull-request-template-for-your-re
 # Setup
 To add the contents of this directory to your repo use the command:
 ```
-git subtree add --prefix .github git@github.com:Flux7Labs/central-repo-dot-github.git master --squash
+git subtree add --prefix .github git@github.com:NTT-DATA-Cloud-Transformation/central-repo-dot-github.git master --squash
 ```
 # Updates
 For subsequent updates from the main repository use the command: 
 ```
-git subtree pull --prefix .github git@github.com:Flux7Labs/central-repo-dot-github.git master --squash
+git subtree pull --prefix .github git@github.com:NTT-DATA-Cloud-Transformation/central-repo-dot-github.git master --squash
 ```
