@@ -23,7 +23,7 @@ Task Link: <!-- Provide link to Trello card/GitHub Issue/etc -->
 
 ## Context
 
-<!-- Ensure your commit is in compliance with there standards here: https://github.com/Flux7Labs/flux7-wiki/wiki/Flux7-Development-Standards  -->
+<!-- Ensure your commit is in compliance with there standards here: https://github.com/NTT-DATA-Cloud-Transformation/flux7-wiki/wiki/Flux7-Development-Standards  -->
 
 ## Description of Testing Process
 

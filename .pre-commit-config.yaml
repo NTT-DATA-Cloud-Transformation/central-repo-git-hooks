@@ -1,5 +1,5 @@
 repos:
--   repo: https://github.com/Flux7Labs/central-repo-git-hooks.git
+-   repo: https://github.com/NTT-DATA-Cloud-Transformation/central-repo-git-hooks.git
     rev: master
     hooks:
     -   id: check-readme
