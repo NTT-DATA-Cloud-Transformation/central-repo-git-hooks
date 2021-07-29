@@ -46,9 +46,9 @@ setup:
 	fi \
 
 	if [[ ! -z "$$EVENT_NAME" ]] && [[ "$$EVENT_NAME" == PR ]]; then \
-		pip install bc-python-hcl2==0.3.15 cfn-lint==0.47.2 networkx==2.4 pre-commit flake8 flake8-print checkov==1.0.580;\
+		pip install bc-python-hcl2==0.3.15 cfn-lint==0.47.2 networkx==2.5 pre-commit flake8 flake8-print checkov==1.0.580;\
 	else \
-		pip install bc-python-hcl2==0.3.15 cfn-lint==0.47.2 networkx==2.4 pre-commit flake8 checkov==1.0.580;\
+		pip install bc-python-hcl2==0.3.15 cfn-lint==0.47.2 networkx==2.5 pre-commit flake8 checkov==1.0.580;\
 	fi \
 	
 	pre-commit install
